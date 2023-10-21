@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 
+
 # production
 /build
 cloud_functions/functions/lib
@@ -29,6 +30,9 @@ firebase-debug.log*
 
 .eslintcache
 .npm
+.yarn
+.yarn/cache/
+
 
 .vercel
 typedoc/
