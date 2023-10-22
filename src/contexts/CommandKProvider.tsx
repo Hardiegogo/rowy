@@ -41,10 +41,10 @@ const CommandKProvider = ({ children }: { children: ReactNode }) => {
     maxWidth: "600px",
     width: "100%",
     background: theme.palette.mode === "dark" ? "#1C1C1F" : "#FFFFFF",
-    color: "var(--foreground)",
+    color: theme.palette.text.primary,
     borderRadius: "8px",
     overflow: "hidden",
-    boxShadow: "var(--shadow)",
+    boxShadow: "0px 6px 20px rgb(0 0 0 / 30%)",
     zIndex: "2000",
   };
 

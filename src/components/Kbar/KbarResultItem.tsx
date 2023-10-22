@@ -1,3 +1,4 @@
+import { useTheme } from "@mui/material";
 import { ActionImpl } from "kbar";
 import React from "react";
 
@@ -14,6 +15,8 @@ const KbarResultItem = React.forwardRef(
     },
     ref: React.Ref<HTMLDivElement>
   ) => {
+    const theme = useTheme();
+
     const ancestors = React.useMemo(() => {
       if (!currentRootActionId) return action.ancestors;
       const index = action.ancestors.findIndex(
@@ -27,7 +30,11 @@ const KbarResultItem = React.forwardRef(
         ref={ref}
         style={{
           padding: "12px 16px",
-          background: active ? "rgba(255, 255, 255, 0.08)" : "transparent",
+          background: active
+            ? theme.palette.mode === "dark"
+              ? "rgba(255, 255, 255, 0.08)"
+              : "rgb(240, 240, 240)"
+            : "transparent",
           borderLeft: `2px solid ${
             active ? "var(--foreground)" : "transparent"
           }`,

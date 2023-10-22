@@ -2,7 +2,7 @@ import { KBarResults, useMatches } from "kbar";
 import KbarResultItem from "./KbarResultItem";
 
 const groupNameStyle = {
-  padding: "8px 16px",
+  padding: "12px 16px",
   fontSize: "10px",
   textTransform: "uppercase" as const,
   opacity: 0.5,
